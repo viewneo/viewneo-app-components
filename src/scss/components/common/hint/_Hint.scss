@@ -1,0 +1,121 @@
+$border-color: #CCCCCC;
+$title-background-color: #F7F7F7;
+
+.hint {
+  display: inline;
+  position: relative;
+
+  .hint-icon {
+    cursor: pointer;
+    color: #bfbfbf;
+  }
+
+  .hint-icon-hover,
+  .hint-icon:hover {
+	   color: #fdc516;
+  }
+}
+
+.hint-popover {
+  opacity: 1;
+  display: block;
+  border: 1px solid $border-color;
+  width: 400px;
+  background-color: #FFFFFF;
+  color: #455A64;
+  font-weight: 300;
+  position: fixed;
+  z-index: 1000;
+
+  .hint-popover-title {
+    height: 30px;
+    background-color: $title-background-color;
+    font-weight: bolder;
+
+    span {
+      position: absolute;
+      padding-top: 5px;
+      padding-left: 10px;
+    }
+  }
+
+  .hint-popover-text {
+    padding: 10px;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+  }
+
+  .hint-popover-url {
+    height: 30px;
+    background-color: #FFFFFF;
+
+    a, a:visited, a:link, a:hover, a.active {
+      float: right;
+      padding: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      color: #000000;
+    }
+  }
+
+  &:after, &:before {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &.left {
+    &:after {
+      left: 22px;
+    }
+    &:before {
+      left: 21px;
+    }
+  }
+  &.right {
+    &:after {
+      right: 22px;
+    }
+    &:before {
+      right: 21px;
+    }
+  }
+  &.bottom {
+    &:after {
+      top: 99%;
+      border-top-color: #FFFFFF;
+      border-width: 9px;
+    }
+    &:before {
+      top: 100%;
+      border-top-color: $border-color;
+      border-width: 10px;
+    }
+  }
+  &.top {
+    &:after {
+      bottom: 100%;
+      border-bottom-color: $title-background-color;
+      border-width: 9px;
+    }
+    &:before {
+      bottom: 100%;
+      border-bottom-color: $border-color;
+      border-width: 11px;
+    }
+    &.left:before {
+      left: 20px;
+      bottom: 100%;
+      border-bottom-color: $border-color;
+      border-width: 11px;
+    }
+    &.right:before {
+      right: 20px;
+      bottom: 100%;
+      border-bottom-color: $border-color;
+      border-width: 11px;
+    }
+  }
+}

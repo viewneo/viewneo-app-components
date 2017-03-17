@@ -1,0 +1,17 @@
+{
+  "main.css": "static/css/main.css",
+  "main.css.map": "static/css/main.css.map",
+  "main.js": "static/js/main.js",
+  "main.js.map": "static/js/main.js.map",
+  "static/media/fontello.eot?93414152": "static/media/fontello.23d11cb4.eot",
+  "static/media/fontello.svg?93414152": "static/media/fontello.35904830.svg",
+  "static/media/fontello.ttf?93414152": "static/media/fontello.f0399cec.ttf",
+  "static/media/fontello.woff2?93414152": "static/media/fontello.e0b3ad45.woff2",
+  "static/media/fontello.woff?93414152": "static/media/fontello.70fd39fb.woff",
+  "static/media/glyphicons-halflings-regular.eot": "static/media/glyphicons-halflings-regular.2469ccfe.eot",
+  "static/media/glyphicons-halflings-regular.svg": "static/media/glyphicons-halflings-regular.3b31e1de.svg",
+  "static/media/glyphicons-halflings-regular.ttf": "static/media/glyphicons-halflings-regular.84edb1e5.ttf",
+  "static/media/glyphicons-halflings-regular.woff": "static/media/glyphicons-halflings-regular.85df732e.woff",
+  "static/media/glyphicons-halflings-regular.woff2": "static/media/glyphicons-halflings-regular.5e8b1222.woff2",
+  "static/media/loader-big.gif": "static/media/loader-big.a770b679.gif"
+}

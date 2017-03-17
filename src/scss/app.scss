@@ -1,0 +1,270 @@
+/** vendor */
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/react-widgets/dist/css/react-widgets";
+/** vendor */
+@import "./libs/fontello/css/fontello.css";
+
+/** Component related classes */
+@import "components/common/index";
+@import "components/form/index";
+
+body {
+  background: #ffffff;
+  padding: 20px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+label {
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 9px;
+  font-weight: 400;
+}
+
+table.no-spacing {
+  border-spacing:0; /* Removes the cell spacing via CSS */
+  border-collapse: collapse;  /* Optional - if you don't want to have double border where cells touch */
+}
+
+.color-container {
+  display: inline-block;
+  width:100%;
+}
+
+.color-input {
+  color: #333;
+  width: calc(100% - 34px);
+  float: left;
+  height: 34px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+  box-shadow: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 0px;
+}
+
+.color-input:focus {
+  box-shadow: none !important;
+  border: solid 1px #fdc516 !important;
+  outline: none;
+}
+
+.color-input:hover {
+  border: solid 1px #4d4d4d !important;
+}
+
+.color-picker {
+  display: table-cell;
+  float: left;
+  width: 34px;
+  padding: 6px 6px;
+  height: 34px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 3px;
+}
+
+.color-picker .color-picker-inner {
+  display: inline-block;
+  border: none;
+}
+
+.checkbox label {
+  padding-left: 0px;
+}
+.checkbox input[type=checkbox] {
+  display: none;
+}
+.checkbox input[type=checkbox] + label:before {
+  content: " ";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-image: url(../gfx/checkbox.png);
+  cursor: pointer;
+  vertical-align: middle;
+  padding-right: 20px;
+  margin-top: -3px;
+  background-repeat: no-repeat;
+}
+.checkbox input[type=checkbox]:checked + label:before {
+  background-position: 0px -14px;
+}
+
+.btn-primary {
+  position: relative;
+  background-color: #fdc516;
+  border-radius: 3px;
+  font-weight: bold;
+  min-width: 144px;
+  height: 32px;
+  margin-top: 5px;
+  border: 0px;
+  color: #333 !important;
+  outline: none !important;
+}
+
+.btn-primary:hover {
+  background-color: #fbd73c;
+  color: #707070;
+}
+
+.btn-primary:focus {
+  background-color: #fdc516 !important;
+}
+
+.btn-primary:active {
+  background-color: #fdc516 !important;
+  box-shadow: none;
+  padding:0 !important;
+  border:1px solid rgba(0,0,0,0.2) !important;
+}
+
+.form-control {
+  color: #333;
+  background-color: #fff;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border: solid 1px #fdc516;
+}
+
+.form-control:hover {
+  border: solid 1px #4d4d4d !important;
+}
+
+.rw-popup {
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 3px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+ul.rw-list>li.rw-list-option.rw-state-selected,
+.rw-selectlist>li.rw-list-option.rw-state-selected {
+  border: 0px;
+  border-radius: 0px;
+  text-decoration: none;
+  outline: 0;
+  background-color: rgba(220,160,140,0);
+}
+
+ul.rw-list>li.rw-list-option:hover,
+.rw-selectlist>li.rw-list-option:hover {
+  border: 0px;
+  border-radius: 0px;
+  background-color: #fdc516;
+  color: #333;
+}
+
+ul.rw-list > li.rw-list-option, ul.rw-list > li.rw-list-empty, .rw-selectlist > li.rw-list-option, .rw-selectlist > li.rw-list-empty {
+  padding: 5px 10px;
+}
+
+.rw-input {
+  color: #333;
+}
+
+.rw-widget {
+  background-color: #fff;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+}
+
+.rw-widget.rw-state-focus,
+.rw-widget.rw-state-focus:hover {
+  background-color: #fff;
+  box-shadow: none !important;
+  border: solid 1px #fdc516 !important;
+  outline: none;
+}
+
+.rw-dropdownlist:hover {
+  background-color: #fff;
+  box-shadow: none !important;
+  border: solid 1px #4d4d4d !important;
+  outline: none;
+}
+
+.card {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.card__title {
+  padding: 55px 15px 15px 15px;
+  background-color: #345678;
+  color: #FFF;
+  margin: 0px;
+  font-size: 1.8em;
+}
+
+.card__content {
+  padding: 30px 15px 30px 15px;
+}
+
+
+/**
+ * Spinner
+ */
+.spinner {
+    margin: auto;
+    width:  90px;
+    text-align: center;
+}
+.spinner > div {
+	margin: 0 5px;
+    width: 18px;
+    height: 18px;
+    background-color: #fdc516;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 40% {
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+      }
+}

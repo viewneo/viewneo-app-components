@@ -24,6 +24,48 @@ yarn add git+ssh://git@gitlab.adversign-media.de:viewneo-apps/viewneo-apps-compo
 
  ```
 
- 
+### usage
+
+Here is a quick example to get you started:
 
 
+
+#### /App.js
+```javascript
+
+import React, { Component } from 'react';
+import { Container, InputText, Button } from 'viewneo-apps-components';
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+     <Container>
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to React</h2>
+        </div>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+        <InputText value={'Hello'} />
+        <Button text="Save"
+           modifier="primary"
+           isBlock={true}>
+        </Button>
+        </Container>
+      </div>
+    );
+  }
+}
+
+```
+
+#### /style.scss
+
+```scss
+
+@import './node_modules/viewneo-apps-components/build/static/css/main'
+
+```

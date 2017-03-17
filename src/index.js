@@ -1,5 +1,3 @@
-
-
 import Components from './components';
 import './scss/app.css';
 

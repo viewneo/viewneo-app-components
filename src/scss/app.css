@@ -6491,10 +6491,12 @@ ul.rw-list.rw-list-grouped > li.rw-list-option, .rw-selectlist.rw-list-grouped >
 .hint-popover {
   opacity: 1;
   display: block;
-  border: 1px solid #CCCCCC;
+  border: solid 1px #d9d9d9;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
   width: 400px;
   background-color: #FFFFFF;
-  color: #455A64;
+  color: #333;
   font-weight: 300;
   position: fixed;
   z-index: 1000; }

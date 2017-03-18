@@ -38,9 +38,9 @@ const cssFilename = 'static/css/[name].css';
 // However, our output is structured with css, js and media folders.
 // To have this structure working with relative paths, we have to use custom options.
 const extractTextPluginOptions = shouldUseRelativeAssetPaths
-  // Making sure that the publicPath goes back to to build folder.
-  ? { publicPath: Array(cssFilename.split('/').length).join('../') }
-  : undefined;
+// Making sure that the publicPath goes back to to build folder.
+? { publicPath: Array(cssFilename.split('/').length).join('../') }
+: undefined;
 
 // This is the production configuration.
 // It compiles slowly and is focused on producing a fast and minimal bundle.
@@ -64,7 +64,7 @@ module.exports = {
     // We don't currently advertise code splitting but Webpack supports it.
     filename: 'static/js/[name].js',
     chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
-    libraryTarget:"commonjs2",
+    libraryTarget:"umd",
     // We inferred the "public path" (such as / or /my-project) from homepage.
     publicPath: publicPath
   },
@@ -86,7 +86,7 @@ module.exports = {
       'react-native': 'react-native-web'
     }
   },
-  
+
   module: {
     // First, run the linter.
     // It's important to do this before Babel processes the JS.
@@ -125,7 +125,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         include: paths.appSrc,
         loader: 'babel',
-        
+
       },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
@@ -166,7 +166,7 @@ module.exports = {
       // Remember to add the new extension(s) to the "url" loader exclusion list.
     ]
   },
-  
+
   // We use PostCSS for autoprefixing only.
   postcss: function() {
     return [
@@ -242,5 +242,23 @@ module.exports = {
     fs: 'empty',
     net: 'empty',
     tls: 'empty'
-  }
+  },
+  externals: [
+    {
+      react: {
+        root: 'React',
+        commonjs2: 'react',
+        commonjs: 'react',
+        amd: 'react',
+      },
+    },
+    {
+      'react-dom': {
+        root: 'ReactDOM',
+        commonjs2: 'react-dom',
+        commonjs: 'react-dom',
+        amd: 'react-dom',
+      },
+    },
+  ],
 };

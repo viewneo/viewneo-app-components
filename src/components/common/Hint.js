@@ -1,11 +1,8 @@
 'use strict';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Icon from '../Icon';
-
 export default class Hint extends React.Component {
-
     constructor(props) {
         super(props);
         this.onMouseOver = this.onMouseOver.bind(this);
@@ -14,12 +11,9 @@ export default class Hint extends React.Component {
             isOpen: false
         };
     }
-
-
     render() {
         let {hintTitle, hintText, hintUrl} = this.props;
         const style = this.getPopoverStyle();
-
         return (
             <div className="hint" onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
                 <div style={style} className={`hint-popover ${this.arrowDirectionY} ${this.arrowDirectionX}` } ref={(ref) => this.popover = ref}>
@@ -28,18 +22,15 @@ export default class Hint extends React.Component {
                     </div>
                     {hintUrl ? this.renderUrl(hintUrl) : null}
                 </div>
-                <Icon className="hint-icon" fontello={false}
-                      icon='question-circle-o'/>
+                <Icon className="hint-icon glyphicon glyphicon-question-sign" fontello={false}  />
             </div>
         );
     }
-
     renderUrl(hintUrl) {
         return (
             <div className="hint-popover-url"><a href={hintUrl} target="_blank">Mehr erfahren..</a></div>
         );
     }
-
     onMouseOver() {
         clearTimeout(this.mouseOutTimer);
         if (!this.state.isOpen) {
@@ -52,7 +43,6 @@ export default class Hint extends React.Component {
             }, this.props.mouseOverTime);
         }
     }
-
     onMouseOut() {
         clearTimeout(this.mouseOverTimeout);
         this.mouseOutTimer = setTimeout(() => {
@@ -61,8 +51,6 @@ export default class Hint extends React.Component {
             });
         }, this.props.mouseOutTime);
     }
-
-
     getPopoverStyle() {
         const {isOpen} = this.state;
         if (isOpen) {
@@ -71,7 +59,6 @@ export default class Hint extends React.Component {
             var elementRect = this.elementRect;
             var popoverRect = this.popoverRect;
             var viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-
             //default popover style
             let style = {
                 top: elementRect.top - popoverRect.height - 10,
@@ -79,18 +66,15 @@ export default class Hint extends React.Component {
                 right: null,
                 width: null
             };
-
             // check if hint fits in viewport (height)
             if ((elementRect.top - popoverRect.height) < 0) { //pop down
                 style.top = elementRect.bottom + 10;
                 this.arrowDirectionY = 'top';
             }
-
             if ((elementRect.right + popoverRect.width) > viewportWidth) {
                 style.left =  elementRect.left - popoverRect.width + 37;
                 this.arrowDirectionX = 'right';
             }
-
             return {
                 top: style.top,
                 left: style.left,
@@ -103,15 +87,12 @@ export default class Hint extends React.Component {
             visibility: isOpen ? 'visible' : 'hidden'
         };
     }
-
 }
-
 Hint.propTypes = {
     hintTitle: React.PropTypes.string.isRequired,
     hintText: React.PropTypes.string.isRequired,
     hintUrl: React.PropTypes.string,
 };
-
 Hint.defaultProps = {
     mouseOverTime: 400,
     mouseOutTime: 300

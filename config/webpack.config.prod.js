@@ -117,7 +117,7 @@ module.exports = {
         loader: 'url',
         query: {
           limit: 10000,
-          name: 'static/media/[name].[hash:8].[ext]'
+          name: 'frontend/assets/fonts/[name].[ext]'
         }
       },
       // Process JS with Babel.

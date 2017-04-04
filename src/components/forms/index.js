@@ -7,9 +7,11 @@ import SubmitButton from './SubmitButton';
 import SelectInput from './SelectInput';
 import TextArea from './TextArea';
 import DeleteButton from './DeleteButton';
+import ColorPreview from './ColorPreview';
 
 export {
   ColorInput,
+  ColorPreview,
   CheckboxInput,
   TextInput,
   SubmitButton,

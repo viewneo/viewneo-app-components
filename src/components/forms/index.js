@@ -2,6 +2,7 @@
 
 import CheckboxInput from './CheckboxInput';
 import ColorInput from './ColorInput';
+import ColorPreview from './ColorPreview';
 import TextInput from './TextInput';
 import SubmitButton from './SubmitButton';
 import SelectInput from './SelectInput';
@@ -10,6 +11,7 @@ import DeleteButton from './DeleteButton';
 
 export {
   ColorInput,
+  ColorPreview,
   CheckboxInput,
   TextInput,
   SubmitButton,

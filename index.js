@@ -15,7 +15,9 @@ const {
   SubmitButton,
   SelectInput,
   TextArea,
-  DeleteButton
+  DeleteButton,
+  DatePicker,
+  DateInput
 } = require('./build/static/js/main').default;
 
 module.exports = {
@@ -33,5 +35,7 @@ module.exports = {
   SubmitButton,
   SelectInput,
   TextArea,
-  DeleteButton
+  DeleteButton,
+  DatePicker,
+  DateInput
 };

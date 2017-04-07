@@ -2,12 +2,15 @@
   "name": "viewneo-apps-components",
   "version": "0.1.18",
   "private": true,
-  "main":"build/static/main.js",
+  "main": "build/static/main.js",
   "module": "build/static/main.js",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
+    "moment": "^2.18.1",
     "react": "^15.4.2",
+    "react-bootstrap-date-picker": "^5.0.1",
     "react-color": "^2.11.4",
+    "react-datepicker": "^0.44.0",
     "react-dom": "^15.4.2",
     "react-formal": "^0.24.3",
     "react-widgets": "^3.4.6"

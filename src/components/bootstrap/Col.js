@@ -7,7 +7,7 @@ class Col extends React.Component {
     const { children, size } = this.props;
     let className = '';
     if(size.xs) {
-      className += `col-sm-${size.xs} `;
+      className += `col-xs-${size.xs} `;
     }
     if(size.sm) {
       className += `col-sm-${size.sm} `;
@@ -16,7 +16,7 @@ class Col extends React.Component {
       className += `col-md-${size.md} `;
     }
     if(size.lg) {
-      className += `col-md-${size.lg} `;
+      className += `col-lg-${size.lg} `;
     }
 
     return (

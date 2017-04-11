@@ -8,7 +8,6 @@ import SelectInput from './SelectInput';
 import TextArea from './TextArea';
 import DeleteButton from './DeleteButton';
 import ColorPreview from './ColorPreview';
-import DatePicker from './DatePicker';
 import DateInput from './DateInput';
 
 export {
@@ -20,6 +19,5 @@ export {
   SelectInput,
   TextArea,
   DeleteButton,
-  DatePicker,
   DateInput
 };

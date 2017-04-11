@@ -1,12 +1,15 @@
 /** vendor */
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "node_modules/react-widgets/dist/css/react-widgets";
+@import "node_modules/react-datepicker/dist/react-datepicker";
 /** vendor */
 @import "./libs/fontello/css/fontello.css";
 
 /** Component related classes */
 @import "components/common/index";
 @import "components/form/index";
+
+@import "overrides/react-datepicker";
 
 body {
   background: #ffffff;

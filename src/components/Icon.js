@@ -1,16 +1,57 @@
 'use strict';
 import React from 'react';
+import ThemeService from '../services/ThemeService';
+
+var default_colors = {};
 export default class Icon extends React.Component {
+
+    constructor(){
+     super();
+      this.theme = ThemeService.getTheme();
+      this.setDefaultColors();
+      this.state = {};
+    }
+
+    componentDidMount() {
+        this.setState({
+           style : default_colors
+        });
+    }
+    
+    mouseOver() {
+        this.setState({
+            style: {
+                color: this.theme.primary_color
+            }
+        });
+    }
+
+    mouseOut() {
+        this.setState({
+            style: default_colors
+        });
+    }
+    
     render() {
-        const { icon, size, className, fontello, iconColor, ...other} = this.props;
+        const { icon, size, className, fontello, ...other} = this.props;
         let prefix = fontello ? 'icon' : 'fa';
         const style = {};
-        if(iconColor) {
-            style.color = iconColor;
+        if(this.state) {
+            if(this.state.style) {
+                style.color = this.state.style.color;
+            }
         }
         return (
-            <i {...other} style={style} className={`${prefix} ${prefix}-${icon} ${prefix}-${size} ${className ? className : ''}`}></i>
+            <i {...other} 
+            style={style} 
+            onMouseOver={ () => this.mouseOver()}
+            onMouseOut={ () => this.mouseOut()}
+            className={`${prefix} ${prefix}-${icon} ${prefix}-${size} ${className ? className : ''}`}></i>
         );
+    }
+
+    setDefaultColors() {
+        default_colors.color = '#bfbfbf'
     }
 }
 Icon.propTypes = {

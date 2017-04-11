@@ -57,7 +57,7 @@ table.no-spacing {
 
 .color-input:focus {
   box-shadow: none !important;
-  border: solid 1px #fdc516 !important;
+  /*border: solid 1px #fdc516 !important;*/
   outline: none;
 }
 
@@ -106,7 +106,7 @@ table.no-spacing {
 
 .btn-primary {
   position: relative;
-  background-color: #fdc516;
+  /*background-color: #fdc516;*/
   border-radius: 3px;
   font-weight: bold;
   min-width: 144px;
@@ -118,16 +118,17 @@ table.no-spacing {
 }
 
 .btn-primary:hover {
-  background-color: #fbd73c;
+  /*background-color: #fbd73c;*/
+  opacity: 0.85;
   color: #707070;
 }
 
 .btn-primary:focus {
-  background-color: #fdc516 !important;
+  /*background-color: #fdc516 !important;*/
 }
 
 .btn-primary:active {
-  background-color: #fdc516 !important;
+  /*background-color: #fdc516 !important;*/
   box-shadow: none;
   padding:0 !important;
   border:1px solid rgba(0,0,0,0.2) !important;
@@ -143,7 +144,7 @@ table.no-spacing {
 
 .form-control:focus {
   box-shadow: none;
-  border: solid 1px #fdc516;
+  /*border: solid 1px #fdc516;*/
 }
 
 .form-control:hover {
@@ -171,14 +172,15 @@ ul.rw-list>li.rw-list-option.rw-state-selected,
   border-radius: 0px;
   text-decoration: none;
   outline: 0;
-  background-color: rgba(220,160,140,0);
+  background-color: #428BCA;
+  color: #ffffff;
 }
 
 ul.rw-list>li.rw-list-option:hover,
 .rw-selectlist>li.rw-list-option:hover {
   border: 0px;
   border-radius: 0px;
-  background-color: #fdc516;
+  /*background-color: #428BCA;*/
   color: #333;
 }
 
@@ -200,7 +202,7 @@ ul.rw-list > li.rw-list-option, ul.rw-list > li.rw-list-empty, .rw-selectlist > 
 .rw-widget.rw-state-focus:hover {
   background-color: #fff;
   box-shadow: none !important;
-  border: solid 1px #fdc516 !important;
+  /*border: solid 1px #fdc516 !important;*/
   outline: none;
 }
 

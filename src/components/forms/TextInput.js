@@ -2,10 +2,10 @@
 
 import React from 'react';
 import InputContainer from './InputContainer';
-import ThemeService from '../../services/ThemeService';
+//import ThemeService from '../../services/ThemeService';
 
 export default class TextInput extends React.Component {
-
+    /*
     constructor(){
      super();
       this.theme = ThemeService.getTheme();
@@ -17,11 +17,11 @@ export default class TextInput extends React.Component {
            style : {} 
         });
     }
-
+    */
     onChange(e) {
         this.props.onChange(e.currentTarget.value);
     }
-
+    /*
     onFocus() {
         this.setState({
           style : {
@@ -35,16 +35,16 @@ export default class TextInput extends React.Component {
         style: {}
       });
     }
-
+    */
     render() {
         return (
             <InputContainer {...this.props}>
                 <input type='text'
                        readOnly={this.props.readOnly}
                        className='form-control'                                                                  
-                       onFocus={ () => this.onFocus() }
-                       onBlur={ () => this.onBlur()}
-                       style={this.state.style}
+                       //onFocus={ () => this.onFocus() }
+                       //onBlur={ () => this.onBlur()}
+                       //style={this.state.style}
                        placeholder={this.props.placeholder}
                        name={this.props.name}
                        onChange={this.onChange.bind(this)}

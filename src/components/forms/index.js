@@ -3,6 +3,7 @@
 import CheckboxInput from './CheckboxInput';
 import ColorInput from './ColorInput';
 import ColorPreview from './ColorPreview';
+import LoadingCircle from './LoadingCircle';
 import TextInput from './TextInput';
 import SubmitButton from './SubmitButton';
 import SelectInput from './SelectInput';
@@ -14,6 +15,7 @@ export {
   ColorInput,
   ColorPreview,
   CheckboxInput,
+  LoadingCircle,
   TextInput,
   SubmitButton,
   SelectInput,

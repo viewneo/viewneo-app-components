@@ -5,7 +5,6 @@
  	}
 
     setTheme(themeObj) {
-        console.log('theme:', themeObj);
         this.theme = themeObj;
     }
 

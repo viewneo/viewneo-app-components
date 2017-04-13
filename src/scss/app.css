@@ -7209,3 +7209,36 @@ ul.rw-list > li.rw-list-option, ul.rw-list > li.rw-list-empty, .rw-selectlist > 
   40% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
+
+.btn-primary[disabled]:hover {
+  background-color: #fdc516; }
+
+.loadingSpinner {
+  border: 4px solid #FFF;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
+  border-radius: 50%;
+  animation: loadingSpinner 0.7s infinite linear;
+  -webkit-animation: loadingSpinner 0.7s infinite linear; }
+
+button .loadingSpinner {
+  margin-top: -10px;
+  margin-left: -10px;
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+
+@keyframes loadingSpinner {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes loadingSpinner {
+  from {
+    -webkit-transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg); } }

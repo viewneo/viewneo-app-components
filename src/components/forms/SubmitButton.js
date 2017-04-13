@@ -43,8 +43,14 @@ export default class SubmitButton extends React.Component {
             onMouseOver={ () => this.mouseOver()}
             onMouseOut={ () => this.mouseOut()}
             style={this.state.style}>
-                {this.props.text}
+                {this.props.isLoading ? this.renderSpinner() : this.props.text }
             </Form.Button>
+        );
+    }
+
+    renderSpinner() {
+        return (
+            <div className="loadingSpinner"></div>
         );
     }
 

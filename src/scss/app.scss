@@ -273,3 +273,42 @@ ul.rw-list > li.rw-list-option, ul.rw-list > li.rw-list-empty, .rw-selectlist > 
           transform: scale(1.0);
       }
 }
+
+//--- Submit Button Spinner ---
+.btn-primary[disabled]:hover {
+  background-color: #fdc516;
+}
+// ------------- loading spinner -------------
+$loadingSpinnerDiameter: 28px;
+$loadingSpinnerStrokeWidth: 4px;
+$loadingSpinnerStrokeColor: #FFF;
+$loadingSpinnerOpacity: .8;
+$loadingSpinnerStrokeStyle: solid; // solid, dashed, dotted
+$loadingSpinnerSpeed: .7s;
+.loadingSpinner {
+  border: $loadingSpinnerStrokeWidth $loadingSpinnerStrokeStyle $loadingSpinnerStrokeColor;
+  border-top-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0);
+  width: $loadingSpinnerDiameter - ($loadingSpinnerStrokeWidth * 2);
+  height: $loadingSpinnerDiameter - ($loadingSpinnerStrokeWidth * 2);
+  opacity: $loadingSpinnerOpacity;
+  border-radius: 50%;
+  animation: loadingSpinner $loadingSpinnerSpeed infinite linear;
+  -webkit-animation: loadingSpinner $loadingSpinnerSpeed infinite linear;
+}
+button .loadingSpinner {
+  margin-top: (-$loadingSpinnerDiameter / 2) + 4;
+  margin-left: (-$loadingSpinnerDiameter / 2) + 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+@keyframes loadingSpinner {
+  from { transform: rotate(0deg)   }
+  to   { transform: rotate(360deg) }
+}
+@-webkit-keyframes loadingSpinner {
+  from { -webkit-transform: rotate(0deg)   }
+  to   { -webkit-transform: rotate(360deg) }
+}
+

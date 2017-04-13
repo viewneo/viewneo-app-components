@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'React';
+import React from 'react';
 import moment from 'moment';
 import InputContainer from './InputContainer';
 import DatePicker from 'react-datepicker';
@@ -33,11 +33,3 @@ export default class DateInput extends React.Component {
     }
 
 }
-
-DateInput.propTypes = {
-    isClearable: React.PropTypes.bool
-};
-
-DateInput.defaultProps = {
-    isClearable: false
-};

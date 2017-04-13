@@ -3,6 +3,7 @@
 import CheckboxInput from './CheckboxInput';
 import ColorInput from './ColorInput';
 import ColorPreview from './ColorPreview';
+import Footer from './Footer';
 import LoadingCircle from './LoadingCircle';
 import TextInput from './TextInput';
 import SubmitButton from './SubmitButton';
@@ -15,6 +16,7 @@ export {
   ColorInput,
   ColorPreview,
   CheckboxInput,
+   Footer,
   LoadingCircle,
   TextInput,
   SubmitButton,

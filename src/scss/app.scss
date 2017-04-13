@@ -38,6 +38,11 @@ table.no-spacing {
   width:100%;
 }
 
+.modal-footer {
+  margin-top: 40px;
+  padding: 5px 0;
+}
+
 .color-input {
   color: #333;
   width: calc(100% - 34px);
@@ -104,23 +109,29 @@ table.no-spacing {
   background-position: 0px -14px;
 }
 
+.modal-footer .btn + .btn {
+  margin-left: 0px;
+}
+
+.btn {
+  min-width: 144px;
+  height: 32px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
 .btn-primary {
   position: relative;
   /*background-color: #fdc516;*/
   border-radius: 3px;
-  font-weight: bold;
-  min-width: 144px;
-  height: 32px;
-  margin-top: 5px;
   border: 0px;
-  color: #333 !important;
   outline: none !important;
+  float: right;
 }
 
 .btn-primary:hover {
   /*background-color: #fbd73c;*/
   opacity: 0.85;
-  color: #707070;
 }
 
 .btn-primary:focus {
@@ -132,6 +143,25 @@ table.no-spacing {
   box-shadow: none;
   padding:0 !important;
   border:1px solid rgba(0,0,0,0.2) !important;
+}
+
+.btn-cancel, .btn-cancel:active {
+    background: none !important;
+    color: #333 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none !important;
+    float:left;
+}
+
+.btn-cancel:hover{
+	background:none;
+	border:solid 1px #c0c0c0;
+  opacity: 0.6;
+}
+
+.btn-cancel:focus {
+  opacity: 1;
 }
 
 .form-control {
@@ -311,4 +341,3 @@ button .loadingSpinner {
   from { -webkit-transform: rotate(0deg)   }
   to   { -webkit-transform: rotate(360deg) }
 }
-

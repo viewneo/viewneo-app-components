@@ -1,6 +1,6 @@
 {
   "name": "viewneo-apps-components",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "private": true,
   "main": "build/static/main.js",
   "module": "build/static/main.js",
@@ -15,6 +15,7 @@
     "react-datepicker": "^0.44.0",
     "react-dom": "^15.4.2",
     "react-formal": "^0.24.3",
+    "react-modal-bootstrap": "^1.1.1",
     "react-widgets": "^3.4.6"
   },
   "devDependencies": {

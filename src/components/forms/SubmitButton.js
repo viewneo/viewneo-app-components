@@ -23,9 +23,10 @@ export default class SubmitButton extends React.Component {
     mouseOver() {
         this.setState({
             style: {
-                color: this.theme.primary_color,
+                color: this.theme.button_text_color,
                 backgroundColor: this.theme.primary_color,
-                opacitiy: 0.75
+                opacity: 0.75,
+								float:'right'
             }
         });
     }
@@ -39,11 +40,11 @@ export default class SubmitButton extends React.Component {
     render() {
     	return (
             <Form.Button type="submit"
-            className="btn btn-block btn-primary"
+            className="btn btn-primary"
             onMouseOver={ () => this.mouseOver()}
             onMouseOut={ () => this.mouseOut()}
             style={this.state.style}>
-                {this.props.isLoading ? this.renderSpinner() : this.props.text }
+                {this.props.isLoading ? this.renderSpinner() : this.props.saveText }
             </Form.Button>
         );
     }
@@ -55,9 +56,9 @@ export default class SubmitButton extends React.Component {
     }
 
     setDefaultColors() {
-        default_colors.backgroundColor = this.theme.primary_color,
-        default_colors.opacitiy = 1
-        default_colors.color = this.theme.button_text_color
+        default_colors.backgroundColor = this.theme.primary_color;
+        default_colors.opacity = 1;
+        default_colors.color = this.theme.button_text_color;
     }
 
 }

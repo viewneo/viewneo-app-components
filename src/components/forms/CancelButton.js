@@ -10,14 +10,8 @@ export default class CancelButton extends React.Component {
     	return (
             <Form.Button type="button" onClick={this.props.onCancelClick}
             className="btn btn-cancel">
-                {this.props.isLoading ? this.renderSpinner() : this.props.cancelText }
+                { this.props.cancelText }
             </Form.Button>
-        );
-    }
-
-    renderSpinner() {
-        return (
-            <div className="loadingSpinner"></div>
         );
     }
 }

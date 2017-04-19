@@ -271,6 +271,32 @@ ul.rw-list > li.rw-list-option, ul.rw-list > li.rw-list-empty, .rw-selectlist > 
 
 
 /**
+ * react-datepicker
+**/
+.react-datepicker__current-month {
+    margin-top: 0;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.react-datepicker__day, .react-datepicker__day-name, .react-datepicker__week-number {
+    width: 2.6rem;
+    line-height: 2.6rem;
+}
+
+.react-datepicker {
+    font-size: 1.4rem;
+}
+
+.react-datepicker__navigation--next {
+    border-left-color: #333;
+}
+
+.react-datepicker__navigation--previous {
+    border-right-color: #333;
+}
+/**
  * Spinner
  */
 .spinner {

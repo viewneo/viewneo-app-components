@@ -25,6 +25,7 @@ export default class SelectInput extends React.Component {
                 data={this.props.data}
                 defaultValue={this.props.defaultValue ? this.props.defaultValue : 0}
                 onChange={this.onChange.bind(this)}
+                groupBy={this.props.groupBy}
                 disabled={this.props.disabled}/>
             </InputContainer>
         );

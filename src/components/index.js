@@ -1,6 +1,19 @@
 import {  Container,Row,FormGroup,InputText,Button,Col } from './bootstrap';
 import { Hint } from './common';
-import {  ColorInput, ColorPreview, CheckboxInput, Footer, LoadingCircle, TextInput, SubmitButton, SelectInput, TextArea, DeleteButton, DateInput } from './forms';
+import { 
+  ColorInput,
+  ColorPreview,
+  CheckboxInput,
+  Footer,
+  LoadingCircle,
+  TextInput,
+  SubmitButton,
+  SelectInput,
+  TextArea,
+  DeleteButton,
+  DateInput,
+  PictureSelect
+} from './forms';
 
 module.exports = {
   Container,
@@ -20,5 +33,6 @@ module.exports = {
  SelectInput,
  TextArea,
  DeleteButton,
- DateInput
+ DateInput,
+ PictureSelect
 }

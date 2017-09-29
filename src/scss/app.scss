@@ -373,3 +373,22 @@ button .loadingSpinner {
   from { -webkit-transform: rotate(0deg)   }
   to   { -webkit-transform: rotate(360deg) }
 }
+
+
+// ----------------- Picture select ---------------------
+div.picture-select-wrapper {
+  position: relative;
+}
+
+img.select-picture.img-responsive {
+  margin-top: 10%;
+}
+
+div.picture-selected {
+  //opacity: 0.5;
+  //background: rgba(255, 255, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}

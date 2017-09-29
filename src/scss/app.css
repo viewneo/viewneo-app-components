@@ -7293,3 +7293,15 @@ button .loadingSpinner {
     -webkit-transform: rotate(0deg); }
   to {
     -webkit-transform: rotate(360deg); } }
+
+div.picture-select-wrapper {
+  position: relative; }
+
+img.select-picture.img-responsive {
+  margin-top: 10%; }
+
+div.picture-selected {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute; }

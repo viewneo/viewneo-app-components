@@ -3,7 +3,8 @@
 @import "node_modules/react-widgets/dist/css/react-widgets";
 @import "node_modules/react-datepicker/dist/react-datepicker";
 /** vendor */
-@import "./libs/fontello/css/fontello.css";
+//@import "./libs/fontello/css/fontello.css";
+@import "./libs/fontello/css/viewneo_icons.css";
 
 /** Component related classes */
 @import "components/common/index";
@@ -373,3 +374,32 @@ button .loadingSpinner {
   from { -webkit-transform: rotate(0deg)   }
   to   { -webkit-transform: rotate(360deg) }
 }
+
+
+// ----------------- Picture select ---------------------
+div.picture-select-wrapper {
+  position: relative;
+}
+
+img.select-picture.img-responsive {
+  margin-top: 10%;
+}
+
+div.picture-selected {
+  //opacity: 0.5;
+  //background: rgba(255, 255, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+div.picture-selected i.icon-save {
+  position: relative;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+}
+
+

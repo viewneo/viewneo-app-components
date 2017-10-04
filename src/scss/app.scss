@@ -3,7 +3,8 @@
 @import "node_modules/react-widgets/dist/css/react-widgets";
 @import "node_modules/react-datepicker/dist/react-datepicker";
 /** vendor */
-@import "./libs/fontello/css/fontello.css";
+//@import "./libs/fontello/css/fontello.css";
+@import "./libs/fontello/css/viewneo_icons.css";
 
 /** Component related classes */
 @import "components/common/index";
@@ -392,3 +393,13 @@ div.picture-selected {
   overflow: hidden;
   position: absolute;
 }
+
+div.picture-selected i.icon-save {
+  position: relative;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+}
+
+

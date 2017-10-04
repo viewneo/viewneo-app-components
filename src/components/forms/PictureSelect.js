@@ -4,11 +4,6 @@ import React from 'react';
 
 export default class PictureSelect extends React.Component {
 
-    constructor(){
-      super();
-      
-    }
-
     onChange(e) {
         this.props.onChange(e.currentTarget.selectedPictures);
     }
@@ -20,6 +15,15 @@ export default class PictureSelect extends React.Component {
         </div>
         );
     }
+
+    renderSelected(index) {
+      const {selectedPictures} = this.props;
+      return (
+        <div className='picture-selected' style={(selectedPictures.contains(this.props.pictureUrls[index])) ? this.props.selectedColor : {}}>
+            <i className="icon-save" style={{position:'relative', top: 'calc(50% - 45px)', left: 'calc(50% - 50px)', fontSize: '70px', color: '#FFFFFF'}}></i>
+        </div>
+      );
+    }
     
     render() {
       const pictureUrls = this.props.pictureUrls;
@@ -30,7 +34,7 @@ export default class PictureSelect extends React.Component {
               {pictureUrls.map((url, index) => (
                 <div className='col-xs-4 col-sm-4 col-md-4 col-lg-3' key={`picture-select-id-${index}`}>
                      <div className='picture-select-wrapper' onClick={() => this.props.onSelect(index)}>
-                          <div className='picture-selected' style={(selectedPictures.contains(this.props.pictureUrls[index])) ? this.props.selectedColor : {}}></div>
+                          {(selectedPictures.contains(this.props.pictureUrls[index])) ? this.renderSelected(index) : null}
                           <img className='select-picture img-responsive' src={url}/>
                     </div>
                 </div>

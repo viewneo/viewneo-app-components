@@ -6,7 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(./libs/fontello/css/fontello.css);
+@import url(./libs/fontello/css/viewneo_icons.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7305,3 +7305,10 @@ div.picture-selected {
   width: 100%;
   overflow: hidden;
   position: absolute; }
+
+div.picture-selected i.icon-save {
+  position: relative;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  font-size: 60px;
+  color: white; }

@@ -12,6 +12,7 @@ import TextArea from './TextArea';
 import DeleteButton from './DeleteButton';
 import DateInput from './DateInput';
 import PictureSelect from './PictureSelect'
+import SelectList from './SelectList'
 
 export {
   ColorInput,
@@ -25,5 +26,6 @@ export {
   TextArea,
   DeleteButton,
   DateInput,
-  PictureSelect
+  PictureSelect,
+  SelectList
 };

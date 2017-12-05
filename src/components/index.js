@@ -1,6 +1,6 @@
 import {  Container,Row,FormGroup,InputText,Button,Col } from './bootstrap';
 import { Hint } from './common';
-import { 
+import {
   ColorInput,
   ColorPreview,
   CheckboxInput,
@@ -12,7 +12,8 @@ import {
   TextArea,
   DeleteButton,
   DateInput,
-  PictureSelect
+  PictureSelect,
+  SelectList
 } from './forms';
 
 module.exports = {
@@ -34,5 +35,6 @@ module.exports = {
  TextArea,
  DeleteButton,
  DateInput,
- PictureSelect
+ PictureSelect,
+ SelectList
 }

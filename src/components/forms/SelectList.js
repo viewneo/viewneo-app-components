@@ -17,15 +17,18 @@ export default class SelectInput extends React.Component {
     }
 
     render() {
+      let orientation = (this.props.orientation === "horizontal") ? "horizontal" : "vertical";
         return (
             <InputContainer {...this.props}>
-                <SelectList
-                valueField={this.props.valueField}
-                textField={this.props.textField}
-                data={this.props.data}
-                defaultValue={this.props.defaultValue ? this.props.defaultValue : 0}
-                onChange={this.onChange.bind(this)}
-                disabled={this.props.disabled}/>
+                <div className={orientation}>
+                  <SelectList
+                  valueField={this.props.valueField}
+                  textField={this.props.textField}
+                  data={this.props.data}
+                  defaultValue={this.props.defaultValue ? this.props.defaultValue : 0}
+                  onChange={this.onChange.bind(this)}
+                  disabled={this.props.disabled}/>
+                </div>
             </InputContainer>
         );
     }

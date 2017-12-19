@@ -7362,7 +7362,6 @@ div[role="radiogroup"] .rw-selectlist > ul > li.rw-list-option {
 
 div[role="radiogroup"] .rw-selectlist > li.rw-list-option:hover, div[role="radiogroup"] ul.rw-list > li.rw-list-option {
   padding: 0px;
-  display: inline;
   margin-right: 15px; }
 
 div[role="radiogroup"] .rw-selectlist > li.rw-list-option:hover, div[role="radiogroup"] ul.rw-list > li.rw-list-option:hover {
@@ -7388,6 +7387,12 @@ div[role="radiogroup"] ul.rw-list > li.rw-list-option.rw-state-focus {
 .rw-selectlist > ul > li.rw-list-option > label > input {
   position: absolute;
   margin: 4px 0 0 -20px; }
+
+.vertical .rw-list-option {
+  display: block; }
+
+.horizontal .rw-list-option {
+  display: inline-block; }
 
 input[type="radio"] {
   background-color: transparent;

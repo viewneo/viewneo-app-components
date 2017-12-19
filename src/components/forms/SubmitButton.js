@@ -43,6 +43,7 @@ export default class SubmitButton extends React.Component {
             className="btn btn-primary"
             onMouseOver={ () => this.mouseOver()}
             onMouseOut={ () => this.mouseOut()}
+						disabled={this.props.isLoading}
             style={this.state.style}>
                 {this.props.isLoading ? this.renderSpinner() : this.props.saveText }
             </Form.Button>

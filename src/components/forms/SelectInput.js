@@ -19,10 +19,11 @@ export default class SelectInput extends React.Component {
     render() {
         return (
             <InputContainer {...this.props}>
-                <DropdownList 
+                <DropdownList
                 valueField={this.props.valueField}
                 textField={this.props.textField}
                 data={this.props.data}
+                dropUp={this.props.dropUp}
                 defaultValue={this.props.defaultValue ? this.props.defaultValue : 0}
                 onChange={this.onChange.bind(this)}
                 groupBy={this.props.groupBy}

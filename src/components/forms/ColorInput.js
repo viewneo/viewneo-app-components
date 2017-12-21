@@ -56,7 +56,12 @@ export default class ColorPicker extends React.Component {
     const innerStyle = {
       backgroundColor: color
     };
-    return (
+    const colorPickerStyle = {};
+    if(this.props.orientationUp && this.props.orientationUp === true) {
+      colorPickerStyle.top = 'inherit';
+      colorPickerStyle.bottom = '0';
+    }
+     return (
       <InputContainer {...this.props}>
         <div className="color-container">
           <input type='text'
@@ -68,7 +73,7 @@ export default class ColorPicker extends React.Component {
                  value={this.props.value}/>
           <div className="color-picker" onClick={this.open}>
             <span className="color-picker-inner" style={innerStyle}></span>
-            <div className="color-picker-picker">
+            <div className="color-picker-picker" style={colorPickerStyle}>
               { isOpen ? <ChromePicker onChange={onChange} color={color}/> : null}
             </div>
           </div>

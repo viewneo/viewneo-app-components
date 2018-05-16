@@ -205,7 +205,7 @@ table.no-spacing {
 
 ul.rw-list>li.rw-list-option.rw-state-selected,
 .rw-selectlist>li.rw-list-option.rw-state-selected {
-  border: 0px;
+  border-color: transparent;
   border-radius: 0px;
   text-decoration: none;
   outline: 0;
@@ -215,9 +215,8 @@ ul.rw-list>li.rw-list-option.rw-state-selected,
 
 ul.rw-list>li.rw-list-option:hover,
 .rw-selectlist>li.rw-list-option:hover {
-  border: 0px;
-  border-radius: 0px;
-  /*background-color: #428BCA;*/
+  border-radius: 0;
+  border-color: transparent;
   color: #333;
 }
 

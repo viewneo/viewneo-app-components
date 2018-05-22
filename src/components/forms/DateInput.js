@@ -5,7 +5,8 @@ import moment from 'moment';
 import InputContainer from './InputContainer';
 import DatePicker from 'react-datepicker';
 
-const FORMAT = 'YYYY-MM-DD';
+let userLang = navigator.language || navigator.userLanguage || 'en';
+let format = moment().locale(userLang).localeData().longDateFormat('L');
 
 export default class DateInput extends React.Component {
 
@@ -15,18 +16,18 @@ export default class DateInput extends React.Component {
     }
 
     onChange(value) {
-        this.props.onChange( value ? value.format(FORMAT) : null);
+        this.props.onChange( value ? moment(value) : null);
     }
 
     render() {
         const { value, onChange, isClearable, placeholder } = this.props;
         return (
             <InputContainer {...this.props}>
-                <DatePicker selected={value ? moment(value, FORMAT) : null}
+                <DatePicker selected={value ? moment(value) : null}
                             onChange={this.onChange}
-                            placeholderText={FORMAT}
+                            placeholderText={format}
                             isClearable={isClearable}
-                            dateFormat={FORMAT}
+                            dateFormat={format}
                             className='form-control'/>
             </InputContainer>
         );
